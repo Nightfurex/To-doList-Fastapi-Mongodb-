@@ -11,7 +11,7 @@ from model import UserSchema
 
 import motor.motor_asyncio
 
-client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["DB_URL"])
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb://localhost:27017/")
 database = client.TodoList
 collection = database.todo
 collection2 = database.userinfo
